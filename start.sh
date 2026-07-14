@@ -73,7 +73,7 @@ echo ""
 
 # ── 3. Start Docker Containers ──
 echo "[~] Building and starting Docker containers. This might take a minute..."
-docker compose -f docker-compose.yml up --build -d
+docker compose --env-file backend/.env -f docker-compose.yml up --build -d
 
 echo ""
 echo "============================================="
