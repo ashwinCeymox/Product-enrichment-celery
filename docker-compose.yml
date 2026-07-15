@@ -18,7 +18,7 @@ services:
   pgweb:
     image: sosedoff/pgweb
     ports:
-      - "8081:8081"
+      - "${HOST_PGWEB_PORT:-8081}:8081"
     environment:
       PGWEB_DATABASE_URL: postgres://pgweb:pgweb@postgres:5432/pgweb?sslmode=disable
     depends_on:
